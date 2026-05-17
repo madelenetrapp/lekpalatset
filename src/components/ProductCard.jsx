@@ -1,7 +1,6 @@
 import useCartStore from "../store/cartStore"
 import useProductStore from "../store/productStore"
 import { useState } from "react"
-import placeholder from "../assets/images/placeholder.png"
 import productSchema from "../validation/produktSchema"
 
 function ProductCard({ product, isAdmin }) {
@@ -20,7 +19,7 @@ function ProductCard({ product, isAdmin }) {
   return (
     <article className="product-card">
       <img
-        src={product.image || placeholder}
+        src={product.image || "/lekpalatset/images/placeholder.png"}
         alt={product.name}
       />
 
