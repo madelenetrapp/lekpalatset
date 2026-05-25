@@ -24,8 +24,8 @@ function CartPage() {
           <p>Din kundkorg är tom.</p>
         ) : (
           <>
-            {cart.map((product) => (
-              <article key={product.id} className="cart-card">
+            {cart.map((product, index) => (
+              <article key={index} className="cart-card">
 
                 {product.image && (
                   <img src={product.image} alt={product.name} />
@@ -36,7 +36,7 @@ function CartPage() {
 
                   <p>{product.price} kr</p>
 
-                  <button className="remove-cart-button" onClick={() => removeFromCart(product.id)}> Ta bort</button>
+                  <button className="remove-cart-button" onClick={() => removeFromCart(index)}> Ta bort</button>
                 </div>
 
               </article>
